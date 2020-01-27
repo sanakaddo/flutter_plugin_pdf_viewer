@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_plugin_pdf_viewer/flutter_plugin_pdf_viewer.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatefulWidget {
   @override
@@ -11,6 +13,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   bool _isLoading = true;
   PDFDocument document;
+  int pageNumber;
 
   @override
   void initState() {
@@ -69,10 +72,29 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('FlutterPluginPDFViewer'),
         ),
-        body: Center(
-            child: _isLoading
-                ? Center(child: CircularProgressIndicator())
-                : PDFViewer(document: document)),
+        body: Column(
+          children: <Widget>[
+            Expanded(
+              child: Container(
+                  child: _isLoading
+                      ? Center(child: CircularProgressIndicator())
+                      : PDFViewer(
+                        document: document,
+                        onPageChange: (int page) {
+                          setState(() => pageNumber = page);
+                        },
+                        )
+                  ),
+              flex: 10,
+            ),
+            Expanded(
+              child: Center(
+                  child: Text(pageNumber.toString()),
+              ),
+              flex: 2,
+            ),
+          ],
+        ),
       ),
     );
   }

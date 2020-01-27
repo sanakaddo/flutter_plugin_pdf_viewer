@@ -14,10 +14,12 @@ class PDFViewer extends StatefulWidget {
   final bool showPicker;
   final bool showNavigation;
   final PDFViewerTooltip tooltip;
+  final Function(int) onPageChange;
 
   PDFViewer(
       {Key key,
       @required this.document,
+        this.onPageChange,
       this.indicatorText = Colors.white,
       this.indicatorBackground = Colors.black54,
       this.showIndicator = true,
@@ -66,8 +68,14 @@ class _PDFViewerState extends State<PDFViewer> {
       _page = await widget.document.get(page: _pageNumber);
     }
     if(this.mounted) {
-      setState(() => _isLoading = false);
+      setState(() =>
+        _isLoading = false
+      );
+      setState(() {
+        widget.onPageChange(_pageNumber);
+      });
     }
+
   }
 
   Widget _drawIndicator() {
