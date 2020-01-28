@@ -146,13 +146,19 @@ class _PDFViewerState extends State<PDFViewer> {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          _isLoading ? Center(child: CircularProgressIndicator()) : _page,
+          _isLoading ? Center(child: CircularProgressIndicator())
+              : Column(
+            children: <Widget>[
+              _page,
+              (widget.audioFilesMap.containsKey(_pageNumber)) ?
+              PlayerWidget(url: widget.audioFilesMap[_pageNumber],)
+                  : Center(child: Text('No Audio Available', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.deepPurple))),
+            ],
+          ),
+
           (widget.showIndicator && !_isLoading)
               ? _drawIndicator()
               : Container(),
-              (widget.audioFilesMap.containsKey(_pageNumber)) ?
-              PlayerWidget(url: widget.audioFilesMap[_pageNumber],)
-              : Center(child: Text('No Audio Available', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.deepPurple))),
         ],
       ),
       floatingActionButton: widget.showPicker
