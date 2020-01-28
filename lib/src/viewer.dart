@@ -272,6 +272,8 @@ class _PlayerWidgetState extends State<PlayerWidget> {
   void initState() {
     super.initState();
     _initAudioPlayer();
+    _position = Duration();
+    url = widget.url;
   }
 
   @override
