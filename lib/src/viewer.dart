@@ -325,7 +325,7 @@ class _PlayerWidgetState extends State<PlayerWidget> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Padding(
-              //padding: EdgeInsets.all(1.0),
+              padding: EdgeInsets.all(0.5),
               child: Stack(
                 children: [
                   Slider(

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d25dbd07-759c-41ff-b4dd-eb33ccbe59a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/viewer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/viewer.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.pub/" />
@@ -47,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/src/viewer.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="155" column="25" selection-start-line="155" selection-start-column="25" selection-end-line="155" selection-end-column="25" />
+            <state relative-caret-position="980">
+              <caret line="327" column="16" selection-start-line="327" selection-start-column="16" selection-end-line="327" selection-end-column="16" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -454,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580245246137</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add flex to 5">
+      <created>1580245414890</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1580245414890</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -479,11 +486,11 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Dart Analysis" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="1" sideWeight="0.49932975" visible="true" weight="0.48090523" />
+      <window_info active="true" anchor="bottom" id="Run" order="1" sideWeight="0.49932975" visible="true" weight="0.20509194" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50067025" side_tool="true" visible="true" weight="0.48090523" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50067025" side_tool="true" visible="true" weight="0.20509194" />
       <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.49865952" weight="0.15841584" />
       <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49913943" weight="0.23109843" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
@@ -513,7 +520,8 @@
     <MESSAGE value="audio must start at 0" />
     <MESSAGE value="changed the structure" />
     <MESSAGE value="add flex" />
-    <option name="LAST_COMMIT_MESSAGE" value="add flex" />
+    <MESSAGE value="add flex to 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="add flex to 5" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/example/.flutter-plugins-dependencies">
@@ -591,8 +599,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/viewer.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="155" column="25" selection-start-line="155" selection-start-column="25" selection-end-line="155" selection-end-column="25" />
+        <state relative-caret-position="980">
+          <caret line="327" column="16" selection-start-line="327" selection-start-column="16" selection-end-line="327" selection-end-column="16" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
