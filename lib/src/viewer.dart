@@ -150,7 +150,7 @@ class _PDFViewerState extends State<PDFViewer> {
               : Column(
             children: <Widget>[
               Expanded(
-                flex: 5,
+                flex: 6,
                   child: _page),
                 Expanded(
                   flex: 2,
@@ -306,17 +306,17 @@ class _PlayerWidgetState extends State<PlayerWidget> {
           children: [
             IconButton(
                 onPressed: _isPlaying ? null : () => _play(),
-                iconSize: 30.0,
+                iconSize: 20.0,
                 icon: Icon(Icons.play_arrow),
                 color: Colors.cyan),
             IconButton(
                 onPressed: _isPlaying ? () => _pause() : null,
-                iconSize: 30.0,
+                iconSize: 20.0,
                 icon: Icon(Icons.pause),
                 color: Colors.cyan),
             IconButton(
                 onPressed: _isPlaying || _isPaused ? () => _stop() : null,
-                iconSize: 30.0,
+                iconSize: 20.0,
                 icon: Icon(Icons.stop),
                 color: Colors.cyan),
           ],
@@ -325,7 +325,7 @@ class _PlayerWidgetState extends State<PlayerWidget> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Padding(
-              padding: EdgeInsets.all(1.0),
+              //padding: EdgeInsets.all(1.0),
               child: Stack(
                 children: [
                   Slider(
@@ -348,7 +348,7 @@ class _PlayerWidgetState extends State<PlayerWidget> {
               _position != null
                   ? '${_positionText ?? ''} / ${_durationText ?? ''}'
                   : _duration != null ? _durationText : '',
-              style: TextStyle(fontSize: 10.0),
+              style: TextStyle(fontSize: 20.0),
             ),
           ],
         ),
