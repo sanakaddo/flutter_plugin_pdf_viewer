@@ -17,6 +17,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+
   flutter_plugin_pdf_viewer:
     path: ../
 

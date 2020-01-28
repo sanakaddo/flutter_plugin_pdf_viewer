@@ -15,6 +15,8 @@ dependencies:
   rxdart: ^0.21.0
   numberpicker: ^1.0.0
   flutter_advanced_networkimage: ^0.5.0
+  cloud_firestore: ^0.13.0+1
+  audioplayers: ^0.14.0
 
 flutter:
   plugin:
