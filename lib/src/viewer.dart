@@ -150,7 +150,9 @@ class _PDFViewerState extends State<PDFViewer> {
           (widget.showIndicator && !_isLoading)
               ? _drawIndicator()
               : Container(),
-          PlayerWidget(url: widget.audioFilesMap[_pageNumber],),
+          widget.audioFilesMap[_pageNumber].isNotEmpty?
+          PlayerWidget(url: widget.audioFilesMap[_pageNumber],)
+              : Container(),
         ],
       ),
       floatingActionButton: widget.showPicker
