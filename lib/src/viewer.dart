@@ -150,7 +150,7 @@ class _PDFViewerState extends State<PDFViewer> {
           (widget.showIndicator && !_isLoading)
               ? _drawIndicator()
               : Container(),
-              (widget.audioFilesMap[_pageNumber] != null) ?
+              (widget.audioFilesMap.containsKey(_pageNumber)) ?
               PlayerWidget(url: widget.audioFilesMap[_pageNumber],)
               : Center(child: Text('No Audio Available', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.deepPurple))),
         ],
@@ -272,8 +272,6 @@ class _PlayerWidgetState extends State<PlayerWidget> {
   void initState() {
     super.initState();
     _initAudioPlayer();
-    _position = Duration();
-    url = widget.url;
   }
 
   @override
