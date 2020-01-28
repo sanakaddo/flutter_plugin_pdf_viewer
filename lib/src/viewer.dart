@@ -149,10 +149,15 @@ class _PDFViewerState extends State<PDFViewer> {
           _isLoading ? Center(child: CircularProgressIndicator())
               : Column(
             children: <Widget>[
-              _page,
-              (widget.audioFilesMap.containsKey(_pageNumber)) ?
+              Expanded(
+                flex: 3,
+                  child: _page),
+                Expanded(
+                  flex: 2,
+              child: (widget.audioFilesMap.containsKey(_pageNumber)) ?
               PlayerWidget(url: widget.audioFilesMap[_pageNumber],)
                   : Center(child: Text('No Audio Available', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.deepPurple))),
+                ),
             ],
           ),
 
