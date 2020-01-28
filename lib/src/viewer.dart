@@ -150,7 +150,7 @@ class _PDFViewerState extends State<PDFViewer> {
               : Column(
             children: <Widget>[
               Expanded(
-                flex: 3,
+                flex: 5,
                   child: _page),
                 Expanded(
                   flex: 2,
