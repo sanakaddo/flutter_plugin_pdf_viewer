@@ -23,6 +23,7 @@ class PDFViewer extends StatefulWidget {
   //final String audioUrl;
   final DocumentSnapshot book;
   List<DocumentSnapshot> audioFiles;
+  Map<int, String> audioFilesMap;
 
 
   PDFViewer(
@@ -31,6 +32,7 @@ class PDFViewer extends StatefulWidget {
         this.onPageChange,
       this.book,
        this.audioFiles,
+        this.audioFilesMap,
       this.indicatorText = Colors.white,
       this.indicatorBackground = Colors.black54,
       this.showIndicator = true,
@@ -148,7 +150,7 @@ class _PDFViewerState extends State<PDFViewer> {
           (widget.showIndicator && !_isLoading)
               ? _drawIndicator()
               : Container(),
-          PlayerWidget(url: widget.audioFiles.elementAt(1).data['url'],),
+          PlayerWidget(url: widget.audioFilesMap[_pageNumber],),
         ],
       ),
       floatingActionButton: widget.showPicker
